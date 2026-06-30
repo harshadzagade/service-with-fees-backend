@@ -1,0 +1,155 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum FeeCalculationType {
+  FIXED
+  FLAT_COPY_WISE
+  BASE_PLUS_ADDITIONAL
+  SEMESTER_WISE
+}
+
+enum ApplicationStatus {
+  PENDING
+  SUCCESS
+  FULFILLED
+}
+
+enum UserRole {
+  SUPERADMIN
+  INSTITUTE_ADMIN
+  ACCOUNTANT
+}
+
+model User {
+  id           String     @id @default(uuid())
+  email        String     @unique
+  name         String
+  password     String
+  role         UserRole   @default(INSTITUTE_ADMIN)
+  instituteId  String?    @map("institute_id")
+  institute    Institute? @relation(fields: [instituteId], references: [id])
+  createdAt    DateTime   @default(now()) @map("created_at")
+  updatedAt    DateTime   @updatedAt @map("updated_at")
+
+  @@map("users")
+}
+
+model Institute {
+  id               String      @id @default(uuid())
+  name             String
+  code             String      @unique
+  payuMerchantKey  String?     @map("payu_merchant_key")
+  payuSalt         String?     @map("payu_salt")
+  smtpConfig       Json?       @map("smtp_config") // JSON containing host, port, user, pass, ccEmail
+  gstin            String?
+  status           String      @default("ACTIVE") // ACTIVE, INACTIVE
+  programmes       Programme[]
+  services         Service[]
+  users            User[]
+  createdAt        DateTime    @default(now()) @map("created_at")
+  updatedAt        DateTime    @updatedAt @map("updated_at")
+
+  @@map("institutes")
+}
+
+model Programme {
+  id           String        @id @default(uuid())
+  instituteId  String        @map("institute_id")
+  institute    Institute     @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+  name         String
+  category     String        // University, AICTE, Autonomous, Pharma
+  duration     String        // e.g. "2 Years", "3 Years", "4 Years"
+  applications Application[]
+  createdAt    DateTime      @default(now()) @map("created_at")
+  updatedAt    DateTime      @updatedAt @map("updated_at")
+
+  @@map("programmes")
+}
+
+model Service {
+  id                 String             @id @default(uuid())
+  instituteId        String             @map("institute_id")
+  institute          Institute          @relation(fields: [instituteId], references: [id], onDelete: Cascade)
+  name               String
+  formSchema         Json               @map("form_schema") // JSON representing dynamic form fields
+  feeCalculationType FeeCalculationType @map("fee_calculation_type")
+  basePrice          Decimal            @db.Decimal(10, 2) @map("base_price")
+  additionalPrice    Decimal            @db.Decimal(10, 2) @default(0.00) @map("additional_price")
+  includedQuantity   Int                @default(1) @map("included_quantity")
+  gstRate            Decimal            @db.Decimal(5, 2) @default(18.00) @map("gst_rate")
+  isGstExempt        Boolean            @default(false) @map("is_gst_exempt")
+  applications       Application[]
+  createdAt          DateTime           @default(now()) @map("created_at")
+  updatedAt          DateTime           @updatedAt @map("updated_at")
+
+  @@map("services")
+}
+
+model Application {
+  id             String            @id @default(uuid())
+  studentEmail   String            @map("student_email")
+  studentName    String            @map("student_name")
+  studentPhone   String            @map("student_phone")
+  studentRollNo  String            @map("student_roll_no")
+  programmeId    String            @map("programme_id")
+  programme      Programme         @relation(fields: [programmeId], references: [id])
+  serviceId      String            @map("service_id")
+  service        Service           @relation(fields: [serviceId], references: [id])
+  submittedData  Json              @map("submitted_data")
+  baseAmount     Decimal           @db.Decimal(10, 2) @map("base_amount")
+  gstAmount      Decimal           @db.Decimal(10, 2) @map("gst_amount")
+  cgstAmount     Decimal           @db.Decimal(10, 2) @map("cgst_amount")
+  sgstAmount     Decimal           @db.Decimal(10, 2) @map("sgst_amount")
+  roundOff       Decimal           @db.Decimal(5, 2) @map("round_off")
+  totalAmount    Decimal           @db.Decimal(10, 2) @map("total_amount")
+  status         ApplicationStatus @default(PENDING)
+  payuTxnId      String            @map("payu_txn_id")
+  remarks        String?
+  documents      Document[]
+  createdAt      DateTime          @default(now()) @map("created_at")
+  updatedAt      DateTime          @updatedAt @map("updated_at")
+
+  @@index([payuTxnId])
+  @@map("applications")
+}
+
+model Document {
+  id            String      @id @default(uuid())
+  applicationId String      @map("application_id")
+  application   Application @relation(fields: [applicationId], references: [id], onDelete: Cascade)
+  fileName      String      @map("file_name")
+  s3Url         String      @map("s3_url")
+  fileType      String      @map("file_type")
+  createdAt     DateTime    @default(now()) @map("created_at")
+
+  @@map("documents")
+}
+
+model PaymentLog {
+  id          String   @id @default(uuid())
+  payuTxnId   String   @unique @map("payu_txn_id")
+  amount      Decimal  @db.Decimal(10, 2)
+  status      String   // SUCCESS, FAILED
+  payload     Json
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@map("payment_logs")
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?  @map("user_id")
+  userEmail String   @map("user_email")
+  userName  String   @map("user_name")
+  action    String
+  details   Json?
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("audit_logs")
+}

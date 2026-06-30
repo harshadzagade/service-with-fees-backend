@@ -1,0 +1,1636 @@
+{
+  "institutes": [
+    {
+      "name": "Institute of Management",
+      "code": "IOM",
+      "payuSalt": "MOCK_SALT_IOM",
+      "payuMerchantKey": "MOCK_KEY_IOM",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "iomtest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27IOM1111A1Z1"
+    },
+    {
+      "name": "Institute of PGDM",
+      "code": "PGDM",
+      "payuSalt": "MOCK_SALT_PGDM",
+      "payuMerchantKey": "MOCK_KEY_PGDM",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "pgdmtest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27PGDM1111A1Z1"
+    },
+    {
+      "name": "Asian Management Development Centre",
+      "code": "AMDC",
+      "payuSalt": "MOCK_SALT_AMDC",
+      "payuMerchantKey": "MOCK_KEY_AMDC",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "amdctest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27AMDC1111A1Z1"
+    },
+    {
+      "name": "Institute of Mass Media",
+      "code": "IMM",
+      "payuSalt": "MOCK_SALT_IMM",
+      "payuMerchantKey": "MOCK_KEY_IMM",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "immtest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27IMM1111A1Z1"
+    },
+    {
+      "name": "Institute of Pharmacy Degree",
+      "code": "BPHARM",
+      "payuSalt": "MOCK_SALT_BPHARM",
+      "payuMerchantKey": "MOCK_KEY_BPHARM",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "bpharmtest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27BPHARM1111A1Z1"
+    },
+    {
+      "name": "Institute of Pharmacy Diploma",
+      "code": "DPHARM",
+      "payuSalt": "MOCK_SALT_DPHARM",
+      "payuMerchantKey": "MOCK_KEY_DPHARM",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "dpharmtest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27DPHARM1111A1Z1"
+    },
+    {
+      "name": "Institute of Computer Science",
+      "code": "ICS",
+      "payuSalt": "MOCK_SALT_ICS",
+      "payuMerchantKey": "MOCK_KEY_ICS",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "icstest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27ICS1111A1Z1"
+    },
+    {
+      "name": "Centre for Insurance Training, Research & Development",
+      "code": "CITRD",
+      "payuSalt": "MOCK_SALT_CITRD",
+      "payuMerchantKey": "MOCK_KEY_CITRD",
+      "smtpConfig": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "citrdtest@met.edu",
+        "pass": "apppassword",
+        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+      },
+      "gstin": "27CITRD1111A1Z1"
+    }
+  ],
+  "programmes": [
+    {
+      "instituteCode": "IOM",
+      "name": "Master of Management Studies (MMS)",
+      "category": "University",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IOM",
+      "name": "Ph.D. in Management Studies",
+      "category": "University",
+      "duration": "3 Years"
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Post Graduate Diploma in Management (PGDM)",
+      "category": "AICTE",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "PGPMBA",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "PGPMBA – Business Analytics",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "PGP MCMM – Advertising & PR (AI-Integrated)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "PGP MCMM – Entertainment & Events (AI-Integrated)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "PGP MCMM – Next-Gen Digital Marketing (AI-Integrated)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "PGP MCMM – Journalism & Content Creation (AI-Integrated)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "PGP MCMM – Cinematic Storytelling (AI-Integrated)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "PGP MCMM – Creative Technology & Immersive Media (AI-Integrated)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Certificate in Ad Filmmaking",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Certificate in Documentary Film Making",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Executive Programme in Luxury Brand Management",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Bachelor of Pharmacy (B.Pharm)",
+      "category": "University",
+      "duration": "4 Years"
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Diploma in Pharmacy (D.Pharm)",
+      "category": "University",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Master of Computer Application (MCA)",
+      "category": "University",
+      "duration": "2 Years"
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "PGPMBA-Insurance (Post Graduate Programme in Management and Business Administration Insurance)",
+      "category": "Autonomous",
+      "duration": "2 Years"
+    }
+  ],
+  "services": [
+    {
+      "instituteCode": "IOM",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "IOM",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "IOM",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "IOM",
+      "name": "Transcript Fees",
+      "basePrice": 2000.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 1,
+      "isGstExempt": true,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "IOM",
+      "name": "Educational Verification",
+      "basePrice": 1800.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "IOM",
+      "name": "Transfer Certificate / LC",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Transcript Fees",
+      "basePrice": 2000.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 1,
+      "isGstExempt": true,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Educational Verification",
+      "basePrice": 1800.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "PGDM",
+      "name": "Duplicate Diploma Certificate",
+      "basePrice": 1500.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "Transcript Fees",
+      "basePrice": 2000.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 1,
+      "isGstExempt": false,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "Educational Verification",
+      "basePrice": 1800.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "AMDC",
+      "name": "Duplicate Diploma Certificate",
+      "basePrice": 1500.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Transcript Fees",
+      "basePrice": 2000.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 1,
+      "isGstExempt": false,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Educational Verification",
+      "basePrice": 1800.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "IMM",
+      "name": "Duplicate Diploma Certificate",
+      "basePrice": 1500.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Transcript Fees",
+      "basePrice": 500.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 2,
+      "isGstExempt": true,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Educational Verification",
+      "basePrice": 1200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "BPHARM",
+      "name": "Transfer Certificate / LC",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Transcript Fees",
+      "basePrice": 500.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 2,
+      "isGstExempt": true,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Educational Verification",
+      "basePrice": 1200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "DPHARM",
+      "name": "Transfer Certificate / LC",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Transcript Fees",
+      "basePrice": 2000.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 1,
+      "isGstExempt": true,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Educational Verification",
+      "basePrice": 1800.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "ICS",
+      "name": "Transfer Certificate / LC",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": true,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "Duplicate Mark sheet Fees",
+      "basePrice": 200.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "SEMESTER_WISE",
+      "formSchema": [
+        {
+          "name": "semesters",
+          "label": "Select Semesters to Apply For",
+          "type": "multiselect",
+          "required": true,
+          "options": [
+            "Semester 1",
+            "Semester 2",
+            "Semester 3",
+            "Semester 4",
+            "Semester 5",
+            "Semester 6",
+            "Semester 7",
+            "Semester 8"
+          ]
+        },
+        {
+          "name": "fir_copy",
+          "label": "FIR / Affidavit Copy for Lost Marksheet",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "Bonafide Certificate",
+      "basePrice": 50.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "Duplicate Fee Receipt",
+      "basePrice": 100.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FLAT_COPY_WISE",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Copies",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 1"
+        },
+        {
+          "name": "reason",
+          "label": "Reason / Purpose of Document",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Passport verification, Lost original"
+        }
+      ]
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "Transcript Fees",
+      "basePrice": 2000.0,
+      "additionalPrice": 200.0,
+      "includedQuantity": 1,
+      "isGstExempt": false,
+      "feeCalculationType": "BASE_PLUS_ADDITIONAL",
+      "formSchema": [
+        {
+          "name": "copies",
+          "label": "Number of Transcript Copies Required",
+          "type": "number",
+          "required": true,
+          "min": 1,
+          "max": 10,
+          "placeholder": "e.g. 2"
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Consolidated Marksheet (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "Educational Verification",
+      "basePrice": 1800.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "passing_year",
+          "label": "Passing Year",
+          "type": "select",
+          "required": true,
+          "options": [
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        {
+          "name": "marksheet_upload",
+          "label": "Marksheet/Degree Certificate Upload (PDF)",
+          "type": "file",
+          "required": true
+        }
+      ]
+    },
+    {
+      "instituteCode": "CITRD",
+      "name": "Duplicate Diploma Certificate",
+      "basePrice": 1500.0,
+      "additionalPrice": 0.0,
+      "includedQuantity": 0,
+      "isGstExempt": false,
+      "feeCalculationType": "FIXED",
+      "formSchema": [
+        {
+          "name": "candidate_name",
+          "label": "Candidate Full Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. Rahul Sharma"
+        },
+        {
+          "name": "reason",
+          "label": "Reason for Request",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. College Transfer, Lost Certificate"
+        }
+      ]
+    }
+  ]
+}
