@@ -60,10 +60,11 @@ export async function getPresignedUploadUrl(
   // Local/Mock Fallback
   console.log(`Generating local mock pre-signed upload URL for ${uniqueFileName}...`);
   const port = process.env.PORT || 5000;
+  const baseUrl = process.env.BASE_URL || `http://localhost:${port}`;
   // This directs PUT requests to our local mock endpoint
-  const uploadUrl = `http://localhost:${port}/api/public/upload-local?fileName=${uniqueFileName}&fileType=${encodeURIComponent(fileType)}`;
+  const uploadUrl = `${baseUrl}/api/public/upload-local?fileName=${uniqueFileName}&fileType=${encodeURIComponent(fileType)}`;
   // This is the static URL to access the uploaded file
-  const fileUrl = `http://localhost:${port}/uploads/${uniqueFileName}`;
+  const fileUrl = `${baseUrl}/uploads/${uniqueFileName}`;
 
   return {
     uploadUrl,
