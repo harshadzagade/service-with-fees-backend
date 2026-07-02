@@ -3,112 +3,112 @@
     {
       "name": "Institute of Management",
       "code": "IOM",
-      "payuSalt": "MOCK_SALT_IOM",
-      "payuMerchantKey": "MOCK_KEY_IOM",
+      "payuSalt": "rizvk14f9cwE6Aw6iILW6B0k4lsRsJD6",
+      "payuMerchantKey": "Ks1o0w",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "iomtest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27IOM1111A1Z1"
     },
     {
       "name": "Institute of PGDM",
       "code": "PGDM",
-      "payuSalt": "MOCK_SALT_PGDM",
-      "payuMerchantKey": "MOCK_KEY_PGDM",
+      "payuSalt": "E3bYUrQbHb7QG8y4A01oBVKCIT5wiQcB",
+      "payuMerchantKey": "MSAioA",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "pgdmtest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27PGDM1111A1Z1"
     },
     {
       "name": "Asian Management Development Centre",
       "code": "AMDC",
-      "payuSalt": "MOCK_SALT_AMDC",
-      "payuMerchantKey": "MOCK_KEY_AMDC",
+      "payuSalt": "0naV2kLXwqYddQYAvTiLEWBijEIW02Mt",
+      "payuMerchantKey": "TF1uRw",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "amdctest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27AMDC1111A1Z1"
     },
     {
       "name": "Institute of Mass Media",
       "code": "IMM",
-      "payuSalt": "MOCK_SALT_IMM",
-      "payuMerchantKey": "MOCK_KEY_IMM",
+      "payuSalt": "qwA1md4hvvVgYbGv0o5gx96FTwVqXi5J",
+      "payuMerchantKey": "8VZbC4",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "immtest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27IMM1111A1Z1"
     },
     {
       "name": "Institute of Pharmacy Degree",
       "code": "BPHARM",
-      "payuSalt": "MOCK_SALT_BPHARM",
-      "payuMerchantKey": "MOCK_KEY_BPHARM",
+      "payuSalt": "Bh89ch1u3JwaBcxwT829Tg8Xtvj25z6j",
+      "payuMerchantKey": "pYUteO",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "bpharmtest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27BPHARM1111A1Z1"
     },
     {
       "name": "Institute of Pharmacy Diploma",
       "code": "DPHARM",
-      "payuSalt": "MOCK_SALT_DPHARM",
-      "payuMerchantKey": "MOCK_KEY_DPHARM",
+      "payuSalt": "gAIJCJS68alJnaRrEGBaxsJBAJJjku6U",
+      "payuMerchantKey": "d8KxzY",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "dpharmtest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27DPHARM1111A1Z1"
     },
     {
       "name": "Institute of Computer Science",
       "code": "ICS",
-      "payuSalt": "MOCK_SALT_ICS",
-      "payuMerchantKey": "MOCK_KEY_ICS",
+      "payuSalt": "KZsmCRisl68bCu7HdRcsa3JBoZ94ltLG",
+      "payuMerchantKey": "015eQW",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "icstest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27ICS1111A1Z1"
     },
     {
       "name": "Centre for Insurance Training, Research & Development",
       "code": "CITRD",
-      "payuSalt": "MOCK_SALT_CITRD",
-      "payuMerchantKey": "MOCK_KEY_CITRD",
+      "payuSalt": "0naV2kLXwqYddQYAvTiLEWBijEIW02Mt",
+      "payuMerchantKey": "TF1uRw",
       "smtpConfig": {
         "host": "smtp.gmail.com",
         "port": 587,
-        "user": "citrdtest@met.edu",
-        "pass": "apppassword",
-        "ccEmail": "anirudham_ics@met.edu, harshadz_ics@met.edu, manojkumarp_iit@met.edu"
+        "user": "harshadz_ics@met.edu",
+        "pass": "ilow zxdv ryem wpcn",
+        "ccEmail": "manojkumarp_iit@met.edu, anirudham_ics@met.edu"
       },
       "gstin": "27CITRD1111A1Z1"
     }
@@ -140,43 +140,43 @@
     },
     {
       "instituteCode": "AMDC",
-      "name": "PGPMBA – Business Analytics",
+      "name": "PGPMBA \u2013 Business Analytics",
       "category": "Autonomous",
       "duration": "2 Years"
     },
     {
       "instituteCode": "IMM",
-      "name": "PGP MCMM – Advertising & PR (AI-Integrated)",
+      "name": "PGP MCMM \u2013 Advertising & PR (AI-Integrated)",
       "category": "Autonomous",
       "duration": "2 Years"
     },
     {
       "instituteCode": "IMM",
-      "name": "PGP MCMM – Entertainment & Events (AI-Integrated)",
+      "name": "PGP MCMM \u2013 Entertainment & Events (AI-Integrated)",
       "category": "Autonomous",
       "duration": "2 Years"
     },
     {
       "instituteCode": "IMM",
-      "name": "PGP MCMM – Next-Gen Digital Marketing (AI-Integrated)",
+      "name": "PGP MCMM \u2013 Next-Gen Digital Marketing (AI-Integrated)",
       "category": "Autonomous",
       "duration": "2 Years"
     },
     {
       "instituteCode": "IMM",
-      "name": "PGP MCMM – Journalism & Content Creation (AI-Integrated)",
+      "name": "PGP MCMM \u2013 Journalism & Content Creation (AI-Integrated)",
       "category": "Autonomous",
       "duration": "2 Years"
     },
     {
       "instituteCode": "IMM",
-      "name": "PGP MCMM – Cinematic Storytelling (AI-Integrated)",
+      "name": "PGP MCMM \u2013 Cinematic Storytelling (AI-Integrated)",
       "category": "Autonomous",
       "duration": "2 Years"
     },
     {
       "instituteCode": "IMM",
-      "name": "PGP MCMM – Creative Technology & Immersive Media (AI-Integrated)",
+      "name": "PGP MCMM \u2013 Creative Technology & Immersive Media (AI-Integrated)",
       "category": "Autonomous",
       "duration": "2 Years"
     },
