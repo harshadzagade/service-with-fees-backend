@@ -1,5 +1,8 @@
 import * as nodemailer from 'nodemailer';
+import { PrismaClient } from '@prisma/client';
 import { generateReceiptPdf } from './pdfReceipt';
+
+const prisma = new PrismaClient();
 
 export interface SendEmailParams {
   applications: any[];
@@ -16,14 +19,42 @@ export async function sendPaymentSuccessEmail(params: SendEmailParams): Promise<
   const txnId = firstApp.payuTxnId;
   const finalTotalAmount = applications.reduce((sum, app) => sum + Number(app.totalAmount), 0);
 
+  // Fetch admin emails for this institute from database
+  let adminEmails: string[] = [];
+  try {
+    const admins = await prisma.user.findMany({
+      where: {
+        instituteId: institute.id,
+        role: 'INSTITUTE_ADMIN',
+      },
+      select: { email: true },
+    });
+    adminEmails = admins.map(a => a.email);
+  } catch (err) {
+    console.error('Failed to fetch admin users for email CC:', err);
+  }
+
   // 1. Establish Transporter settings (dynamically read from Institute or default to Env)
   const instSmtp = institute.smtpConfig as any;
   const smtpHost = instSmtp?.host || process.env.SMTP_HOST || 'smtp.gmail.com';
   const smtpPort = Number(instSmtp?.port || process.env.SMTP_PORT || 587);
   const smtpUser = instSmtp?.user || process.env.SMTP_USER || 'test@example.com';
   const smtpPass = instSmtp?.pass || process.env.SMTP_PASS || '';
-  const smtpFrom = instSmtp?.from || process.env.SMTP_FROM || 'noreply@met.edu';
-  const adminCc = instSmtp?.ccEmail || institute.senderEmail || ''; // CC admin configured for the institute
+  const smtpFrom = instSmtp?.from || process.env.SMTP_FROM || smtpUser || 'noreply@met.edu';
+
+  // Compile CC recipients: SMTP config ccEmail, global fallbacks, and all institute admins
+  const ccRecipients: string[] = [];
+  if (instSmtp?.ccEmail) ccRecipients.push(instSmtp.ccEmail);
+  if (process.env.SMTP_CC) ccRecipients.push(process.env.SMTP_CC);
+  if (process.env.ADMIN_EMAIL) ccRecipients.push(process.env.ADMIN_EMAIL);
+
+  adminEmails.forEach((email) => {
+    if (email && !ccRecipients.includes(email)) {
+      ccRecipients.push(email);
+    }
+  });
+
+  const finalCcString = ccRecipients.join(', ');
 
   console.log(`Configuring SMTP connection for ${institute.name} via ${smtpHost}:${smtpPort}...`);
 
@@ -101,9 +132,9 @@ export async function sendPaymentSuccessEmail(params: SendEmailParams): Promise<
       ],
     };
 
-    if (adminCc) {
-      mailOptions.cc = adminCc;
-      console.log(`Adding CC recipient: ${adminCc}`);
+    if (finalCcString) {
+      mailOptions.cc = finalCcString;
+      console.log(`Adding CC recipients: ${finalCcString}`);
     }
 
     await transporter.sendMail(mailOptions);
