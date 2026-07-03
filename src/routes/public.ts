@@ -232,6 +232,7 @@ router.post('/checkout', async (req: Request, res: Response) => {
         productinfo: payuHashParams.productinfo,
         firstname: payuHashParams.firstname,
         email: payuHashParams.email,
+        phone: studentPhone,
         hash: hash,
         surl: `http://localhost:5000/api/payments/callback/success`,
         furl: `http://localhost:5000/api/payments/callback/failure`,
