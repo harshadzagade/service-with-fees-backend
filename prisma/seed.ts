@@ -6,44 +6,45 @@ import * as path from 'path';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('Seeding database...');
+  console.log('Seeding database safely (upserting configurations)...');
 
-  // 1. Clear existing data (in order of dependencies)
-  await prisma.document.deleteMany();
-  await prisma.application.deleteMany();
-  await prisma.paymentLog.deleteMany();
-  await prisma.service.deleteMany();
-  await prisma.programme.deleteMany();
-  await prisma.user.deleteMany();
-  await prisma.institute.deleteMany();
-  await prisma.auditLog.deleteMany();
-
-  console.log('Existing tables cleared.');
-
-  // 2. Read master data JSON file
+  // 1. Read master data JSON file
   const dataPath = path.join(__dirname, 'master_data.json');
   if (!fs.existsSync(dataPath)) {
     throw new Error(`Master data file not found at ${dataPath}. Run parse_excel.py first.`);
   }
   const masterData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
 
-  // 3. Create Superadmin User
+  // 2. Upsert Superadmin User
   const superadminPassword = await bcrypt.hash('admin123', 10);
-  await prisma.user.create({
-    data: {
+  await prisma.user.upsert({
+    where: { email: 'superadmin@met.edu' },
+    update: {
+      name: 'Super Admin',
+      role: UserRole.SUPERADMIN,
+    },
+    create: {
       email: 'superadmin@met.edu',
       name: 'Super Admin',
       password: superadminPassword,
       role: UserRole.SUPERADMIN,
     },
   });
-  console.log('Superadmin user created.');
+  console.log('Superadmin user upserted.');
 
-  // 4. Create Institutes
+  // 3. Upsert Institutes and admin accounts
   const createdInstitutes: { [code: string]: any } = {};
   for (const inst of masterData.institutes) {
-    const dbInst = await prisma.institute.create({
-      data: {
+    const dbInst = await prisma.institute.upsert({
+      where: { code: inst.code },
+      update: {
+        name: inst.name,
+        payuMerchantKey: inst.payuMerchantKey,
+        payuSalt: inst.payuSalt,
+        smtpConfig: inst.smtpConfig,
+        gstin: inst.gstin,
+      },
+      create: {
         name: inst.name,
         code: inst.code,
         payuMerchantKey: inst.payuMerchantKey,
@@ -54,43 +55,67 @@ async function main() {
       },
     });
     createdInstitutes[inst.code] = dbInst;
-    console.log(`Institute created: ${inst.name} (${inst.code})`);
+    console.log(`Institute configured: ${inst.name} (${inst.code})`);
 
-    // Create a default admin account for this institute
+    // Upsert default admin account for this institute
+    const adminEmail = `${inst.code.toLowerCase()}admin@met.edu`;
     const adminPassword = await bcrypt.hash(`${inst.code.toLowerCase()}123`, 10);
-    await prisma.user.create({
-      data: {
-        email: `${inst.code.toLowerCase()}admin@met.edu`,
+    await prisma.user.upsert({
+      where: { email: adminEmail },
+      update: {
+        name: `${inst.code} Admin`,
+        instituteId: dbInst.id,
+      },
+      create: {
+        email: adminEmail,
         name: `${inst.code} Admin`,
         password: adminPassword,
         role: UserRole.INSTITUTE_ADMIN,
         instituteId: dbInst.id,
       },
     });
-    console.log(`Admin account created for ${inst.code}: ${inst.code.toLowerCase()}admin@met.edu`);
+    console.log(`Admin account configured for ${inst.code}: ${adminEmail}`);
   }
 
-  // 5. Create Programmes
-  const createdProgrammes: { [key: string]: any } = {};
+  // 4. Upsert Programmes
   for (const prog of masterData.programmes) {
     const inst = createdInstitutes[prog.instituteCode];
     if (!inst) {
       console.warn(`Warning: Institute code ${prog.instituteCode} not found for programme ${prog.name}. Skipping.`);
       continue;
     }
-    const dbProg = await prisma.programme.create({
-      data: {
+
+    // Check if programme already exists for this institute
+    let dbProg = await prisma.programme.findFirst({
+      where: {
         instituteId: inst.id,
         name: prog.name,
-        category: prog.category,
-        duration: prog.duration,
       },
     });
-    createdProgrammes[`${prog.instituteCode}_${prog.name}`] = dbProg;
-  }
-  console.log(`Programmes created: ${masterData.programmes.length}`);
 
-  // 6. Create Services
+    if (!dbProg) {
+      dbProg = await prisma.programme.create({
+        data: {
+          instituteId: inst.id,
+          name: prog.name,
+          category: prog.category,
+          duration: prog.duration,
+        },
+      });
+      console.log(`Programme created: ${prog.name} under ${prog.instituteCode}`);
+    } else {
+      dbProg = await prisma.programme.update({
+        where: { id: dbProg.id },
+        data: {
+          category: prog.category,
+          duration: prog.duration,
+        },
+      });
+      console.log(`Programme updated: ${prog.name} under ${prog.instituteCode}`);
+    }
+  }
+
+  // 5. Upsert Services
   for (const srv of masterData.services) {
     const inst = createdInstitutes[srv.instituteCode];
     if (!inst) {
@@ -106,20 +131,43 @@ async function main() {
     else if (srv.feeCalculationType === 'SEMESTER_WISE') calcType = FeeCalculationType.SEMESTER_WISE;
     else calcType = FeeCalculationType.FIXED;
 
-    await prisma.service.create({
-      data: {
+    // Check if service already exists for this institute
+    let dbSrv = await prisma.service.findFirst({
+      where: {
         instituteId: inst.id,
         name: srv.name,
-        formSchema: srv.formSchema,
-        feeCalculationType: calcType,
-        basePrice: srv.basePrice,
-        additionalPrice: srv.additionalPrice,
-        includedQuantity: srv.includedQuantity,
-        gstRate: 18.00,
-        isGstExempt: srv.isGstExempt,
       },
     });
-    console.log(`Service created: ${srv.name} under ${srv.instituteCode}`);
+
+    if (!dbSrv) {
+      await prisma.service.create({
+        data: {
+          instituteId: inst.id,
+          name: srv.name,
+          formSchema: srv.formSchema,
+          feeCalculationType: calcType,
+          basePrice: srv.basePrice,
+          additionalPrice: srv.additionalPrice,
+          includedQuantity: srv.includedQuantity,
+          gstRate: 18.00,
+          isGstExempt: srv.isGstExempt,
+        },
+      });
+      console.log(`Service created: ${srv.name} under ${srv.instituteCode}`);
+    } else {
+      await prisma.service.update({
+        where: { id: dbSrv.id },
+        data: {
+          formSchema: srv.formSchema,
+          feeCalculationType: calcType,
+          basePrice: srv.basePrice,
+          additionalPrice: srv.additionalPrice,
+          includedQuantity: srv.includedQuantity,
+          isGstExempt: srv.isGstExempt,
+        },
+      });
+      console.log(`Service updated: ${srv.name} under ${srv.instituteCode}`);
+    }
   }
 
   console.log('Seeding database complete!');
